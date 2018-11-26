@@ -1,0 +1,15 @@
+[
+{
+  "modid": "buildingassistance",
+  "name": "Building Assistance",
+  "description": "Mod that provides assistance for building structures.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/TheOdd/Building-Assistance",
+  "updateUrl": "https://github.com/TheOdd/Building-Assistance",
+  "authorList": ["TheOdd", "juliankaeppel"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
