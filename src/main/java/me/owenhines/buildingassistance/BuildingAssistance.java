@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class BuildingAssistance {
     public static final String MODID = "buildingassistance";
     public static final String NAME = "Building Assistance";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.12.2-0.0.1.0"; // MCVERSION-MAJORMOD.MAJORAPI.MINOR.PATCH
 
     private static Logger logger;
 
