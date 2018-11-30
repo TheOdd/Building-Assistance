@@ -1,9 +1,9 @@
-package me.owenhines.buildingassistance.common.block;
+package odd1ty.buildingassistance.common.block;
 
-import me.owenhines.buildingassistance.BuildingAssistance;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import odd1ty.buildingassistance.BuildingAssistance;
 
 public class BlockTest extends Block {
 	public BlockTest() {
