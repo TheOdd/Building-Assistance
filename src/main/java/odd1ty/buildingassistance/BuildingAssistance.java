@@ -1,10 +1,9 @@
-package me.owenhines.buildingassistance;
+package odd1ty.buildingassistance;
 
 import java.lang.reflect.Field;
 
 import org.apache.logging.log4j.Logger;
 
-import me.owenhines.buildingassistance.common.item.ItemTest;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -18,6 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import odd1ty.buildingassistance.common.item.ItemTest;
 
 @Mod(modid = BuildingAssistance.MODID, name = BuildingAssistance.NAME, version = BuildingAssistance.VERSION)
 @Mod.EventBusSubscriber
