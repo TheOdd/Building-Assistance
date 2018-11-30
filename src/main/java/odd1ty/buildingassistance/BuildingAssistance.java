@@ -1,4 +1,4 @@
-package me.owenhines.buildingassistance;
+package odd1ty.buildingassistance;
 
 import org.apache.logging.log4j.Logger;
 
