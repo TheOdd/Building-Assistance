@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "lgl",
+    "glg",
+    "lgl"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "type": "forge:ore_dict",
+      "ore": "blockGlass"
+    },
+    "l":
+    {
+      "item": "minecraft:dye",
+      "data": 4
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:diamond",
+    "count": 1
+  }
+}
