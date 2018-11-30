@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "d"
+  ],
+  "key":
+  {
+    "d":
+    {
+      "type": "forge:ore_dict",
+      "ore": "gemDiamond"
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:dirt",
+    "data": 0,
+    "count": 64
+  }
+}

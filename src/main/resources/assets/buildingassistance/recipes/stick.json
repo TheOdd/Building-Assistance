@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "w",
+    "w"
+  ],
+  "key":
+  {
+    "w":
+    {
+      "type": "forge:ore_dict",
+      "ore": "logWood"
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:stick",
+    "count": 16
+  }
+}
