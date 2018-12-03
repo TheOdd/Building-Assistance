@@ -1,7 +1,6 @@
 package odd1ty.buildingassistance.common.block;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,7 +15,7 @@ import net.minecraft.world.World;
 import odd1ty.buildingassistance.BuildingAssistance;
 import odd1ty.buildingassistance.common.tile.TileTest;
 
-public class BlockTest extends Block implements ITileEntityProvider {
+public class BlockTest extends Block {
 	public BlockTest() {
 		super(Material.ROCK);
 		this.setUnlocalizedName(BuildingAssistance.MODID + "." + "test");
@@ -32,11 +31,6 @@ public class BlockTest extends Block implements ITileEntityProvider {
 	
 	@Override
 	public TileEntity createTileEntity(World world, IBlockState state) {
-		return new TileTest();
-	}
-
-	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
 		return new TileTest();
 	}
 	

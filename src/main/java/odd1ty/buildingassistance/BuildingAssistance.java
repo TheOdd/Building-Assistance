@@ -1,16 +1,11 @@
 package odd1ty.buildingassistance;
 
-import java.lang.reflect.Field;
-
 import org.apache.logging.log4j.Logger;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -19,8 +14,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import odd1ty.buildingassistance.common.block.BlockTest;
 import odd1ty.buildingassistance.common.tile.TileTest;
 
@@ -70,14 +63,5 @@ public class BuildingAssistance {
     	
     	for (Block block : blocks)
     		event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
-    }
-    
-    @SubscribeEvent
-    @SideOnly(Side.CLIENT)
-    public static void registerModels(ModelRegistryEvent event) throws Exception {
-    	for (Field f : Items.class.getDeclaredFields()) {
-    		Item item = (Item)f.get(null);
-    		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-    	}
     }
 }
