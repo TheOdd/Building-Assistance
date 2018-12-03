@@ -1,18 +1,15 @@
-{
+{ 
   "type": "minecraft:crafting_shapeless",
-  "ingredients":
-  [
+  "ingredients": [
     {
-      "item": "minecraft:diamond_block"
-    },
-    {
-      "item": "minecraft:gold_block"
-    }
+	    "item": "minecraft:diamond_block"
+	  },
+	  {
+	    "item": "minecraft:gold_block"
+	  }
   ],
-  "results":
-  {
-    "item": "minecraft:diamond",
-    "data": 0,
-    "count": 1
+  "result": {
+    "item": "buildingassistance:test",
+    "data": 0
   }
 }
