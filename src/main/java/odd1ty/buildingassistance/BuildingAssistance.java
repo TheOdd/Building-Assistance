@@ -5,21 +5,24 @@ import org.apache.logging.log4j.Logger;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import odd1ty.buildingassistance.common.block.BlockStructureProjector;
+import odd1ty.buildingassistance.common.tileentity.TileEntityStructureProjector;
 
 @Mod(modid = BuildingAssistance.MODID, name = BuildingAssistance.NAME, version = BuildingAssistance.VERSION)
 @Mod.EventBusSubscriber
 public class BuildingAssistance {
     public static final String MODID = "buildingassistance";
     public static final String NAME = "Building Assistance";
-    public static final String VERSION = "1.12.2-0.0.2.0"; // MCVERSION-MAJORMOD.MAJORAPI.MINOR.PATCH
+    public static final String VERSION = "1.12.2-0.0.3.0"; // MCVERSION-MAJORMOD.MAJORAPI.MINOR.PATCH
 
     private static Logger logger;
     
@@ -48,6 +51,8 @@ public class BuildingAssistance {
     	event.getRegistry().registerAll(
     		new BlockStructureProjector().setRegistryName(MODID, "structure_projector")
     	);
+    	
+    	GameRegistry.registerTileEntity(TileEntityStructureProjector.class, new ResourceLocation(MODID, "structure_projector"));
     }
     
     @SubscribeEvent
