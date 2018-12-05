@@ -14,6 +14,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
+import odd1ty.buildingassistance.common.block.BlockGuide;
 import odd1ty.buildingassistance.common.block.BlockStructureProjector;
 import odd1ty.buildingassistance.common.tileentity.TileEntityStructureProjector;
 
@@ -22,13 +23,20 @@ import odd1ty.buildingassistance.common.tileentity.TileEntityStructureProjector;
 public class BuildingAssistance {
     public static final String MODID = "buildingassistance";
     public static final String NAME = "Building Assistance";
-    public static final String VERSION = "1.12.2-0.0.3.0"; // MCVERSION-MAJORMOD.MAJORAPI.MINOR.PATCH
+    public static final String VERSION = "1.12.2-0.0.4.0"; // MCVERSION-MAJORMOD.MAJORAPI.MINOR.PATCH
 
     private static Logger logger;
+    
+    private static Block withName(Block block, String name) {
+    	return block
+    			.setRegistryName(MODID, name)
+    			.setUnlocalizedName(MODID + "." + name);
+    }
     
     @ObjectHolder(MODID)
     public static class Blocks {
     	public static final Block structure_projector = null;
+    	public static final Block guide = null;
     }
     
     @ObjectHolder(MODID)
@@ -49,7 +57,8 @@ public class BuildingAssistance {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
     	event.getRegistry().registerAll(
-    		new BlockStructureProjector().setRegistryName(MODID, "structure_projector")
+    		withName(new BlockStructureProjector(), "structure_projector"),
+    		withName(new BlockGuide(), "guide")
     	);
     	
     	GameRegistry.registerTileEntity(TileEntityStructureProjector.class, new ResourceLocation(MODID, "structure_projector"));

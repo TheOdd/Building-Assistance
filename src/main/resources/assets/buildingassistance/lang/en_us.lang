@@ -1,5 +1,6 @@
 # blocks
 tile.buildingassistance.structure_projector.name=Structure Projector
+tile.buildingassistance.guide.name=Guide
 
 # items
 item.buildingassistance.structure_projector.name=Structure Projector

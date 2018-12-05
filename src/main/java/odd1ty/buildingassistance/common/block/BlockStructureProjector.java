@@ -16,7 +16,6 @@ import odd1ty.buildingassistance.common.tileentity.TileEntityStructureProjector;
 public class BlockStructureProjector extends Block {
 	public BlockStructureProjector() {
 		super(Material.ROCK);
-		this.setUnlocalizedName(BuildingAssistance.MODID + "." + "structure_projector");
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 	}
 	
@@ -39,7 +38,7 @@ public class BlockStructureProjector extends Block {
 			EnumFacing side, float hitX, float hitY, float hitZ) {
 		// Logical server check
 		if (!world.isRemote) {
-			
+			world.setBlockState(pos.down(), BuildingAssistance.Blocks.guide.getDefaultState());
 		}
 		
 		return true;
