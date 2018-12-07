@@ -1,17 +1,10 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "textures": {
-      "end": "blocks/bookshelf",
-      "side": "blocks/cobblestone"
-    }
+    "model": "buildingassistance:structure_projector"
   },
   "variants": {
-    "normal": [{
-      "model": "cube_column"
-    }],
-    "inventory": [{
-      "model": "cube_column"
-    }]
+    "normal": [{}],
+    "inventory": [{}]
   }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "buildingassistance:blocks/structure_projector_end",
+    "side": "buildingassistance:blocks/structure_projector_side"
+  }
+}
