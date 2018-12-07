@@ -46,4 +46,9 @@ public class BlockGuide extends Block {
 	public boolean canCollideCheck(IBlockState state, boolean hitIfLiquid) {
 		return false;
 	}
+	
+	@Override
+	public boolean isReplaceable(IBlockAccess worldIn, BlockPos pos) {
+		return true;
+	}
 }
