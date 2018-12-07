@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockGuide extends Block {
 
 	public BlockGuide() {
-		super(Material.AIR);
+		super(Material.ROCK);
 	}
 	
 	// Required to render as translucent
@@ -29,9 +29,21 @@ public class BlockGuide extends Block {
 		return false;
 	}
 	
+	@Override
+	public boolean isFullCube(IBlockState state) {
+		return false;
+	}
+	
 	// Makes the block have no collision.
 	@Override
 	public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
 		return NULL_AABB;
+	}
+	
+	// In combination w/ isFullCube, this has the effect of the player being able to break
+	// other blocks through this one.
+	@Override
+	public boolean canCollideCheck(IBlockState state, boolean hitIfLiquid) {
+		return false;
 	}
 }
