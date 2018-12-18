@@ -41,6 +41,9 @@ public class BlockStructureProjector extends Block {
 			EnumFacing side, float hitX, float hitY, float hitZ) {
 		// Logical server check
 		if (!world.isRemote) {
+			TileEntity te = world.getTileEntity(pos);
+			if (!(te instanceof TileEntityStructureProjector))
+				return false;
 			world.setBlockState(pos.down(), BuildingAssistance.Blocks.guide.getDefaultState());
 			player.openGui(BuildingAssistance.instance, GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
 		}
