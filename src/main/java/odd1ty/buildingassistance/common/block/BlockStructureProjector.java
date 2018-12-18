@@ -14,6 +14,9 @@ import odd1ty.buildingassistance.BuildingAssistance;
 import odd1ty.buildingassistance.common.tileentity.TileEntityStructureProjector;
 
 public class BlockStructureProjector extends Block {
+	
+	public static final int GUI_ID = 1;
+	
 	public BlockStructureProjector() {
 		super(Material.ROCK);
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
@@ -39,6 +42,7 @@ public class BlockStructureProjector extends Block {
 		// Logical server check
 		if (!world.isRemote) {
 			world.setBlockState(pos.down(), BuildingAssistance.Blocks.guide.getDefaultState());
+			player.openGui(BuildingAssistance.instance, GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
 		}
 		
 		return true;

@@ -12,10 +12,12 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import odd1ty.buildingassistance.common.block.BlockGuide;
 import odd1ty.buildingassistance.common.block.BlockStructureProjector;
+import odd1ty.buildingassistance.common.gui.GuiProxy;
 import odd1ty.buildingassistance.common.tileentity.TileEntityStructureProjector;
 
 @Mod(modid = BuildingAssistance.MODID, name = BuildingAssistance.NAME, version = BuildingAssistance.VERSION)
@@ -24,6 +26,9 @@ public class BuildingAssistance {
     public static final String MODID = "buildingassistance";
     public static final String NAME = "Building Assistance";
     public static final String VERSION = "1.12.2-0.0.4.1"; // MCVERSION-MAJORMOD.MAJORAPI.MINOR.PATCH
+    
+    @Mod.Instance
+    public static BuildingAssistance instance;
 
     private static Logger logger;
     
@@ -51,6 +56,7 @@ public class BuildingAssistance {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
+    	NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiProxy());
         logger.info("Building Assistance Loaded.");
     }
     
