@@ -44,7 +44,8 @@ public class BlockStructureProjector extends Block {
 			TileEntity te = world.getTileEntity(pos);
 			if (!(te instanceof TileEntityStructureProjector))
 				return false;
-			world.setBlockState(pos.down(), BuildingAssistance.Blocks.guide.getDefaultState());
+			// This sets the block below to a guide block. This was mostly for demo
+			// world.setBlockState(pos.down(), BuildingAssistance.Blocks.guide.getDefaultState());
 			player.openGui(BuildingAssistance.instance, GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
 		}
 		
